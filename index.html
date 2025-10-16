@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card | Frontend Wizards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card">
+    <figure class="avatar" id="avatarDropZone" data-testid="avatar-dropzone">
+      <img 
+        src="https://i.pravatar.cc/200" 
+        alt="User avatar" 
+        id="userAvatar"
+        data-testid="test-user-avatar">
+    </figure>
+
+    <div class="profile-info">
+      <header>
+        <h2 data-testid="test-user-name">Code X Kid</h2>
+      </header>
+
+      <p data-testid="test-user-bio">
+        A passionate frontend wizard learning to build accessible and modern web experiences.
+      </p>
+
+      <p>
+        Current Time (ms): 
+        <span data-testid="test-user-time" id="userTime"></span>
+      </p>
+
+      <section class="avatar-input">
+        <h3>Change Avatar</h3>
+        <input 
+          type="text" 
+          id="avatarUrlInput" 
+          placeholder="Enter image URL" 
+          data-testid="avatar-url-input">
+        <p>or</p>
+        <input 
+          type="file" 
+          id="avatarFileInput" 
+          accept="image/*" 
+          data-testid="avatar-file-input">
+
+        <div class="display-url">
+          <strong>Displayed Image URL:</strong>
+          <div id="displayedUrl" data-testid="avatar-displayed-url">(none)</div>
+        </div>
+      </section>
+
+      <nav aria-label="Social links">
+        <ul data-testid="test-user-social-links">
+          <li><a href="https://twitter.com/" data-testid="test-user-social-twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a href="https://github.com/" data-testid="test-user-social-github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://linkedin.com/" data-testid="test-user-social-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <h3>Hobbies</h3>
+        <ul data-testid="test-user-hobbies">
+          <li>Coding</li>
+          <li>Music</li>
+          <li>Gaming</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Dislikes</h3>
+        <ul data-testid="test-user-dislikes">
+          <li>Procrastination</li>
+          <li>Messy code</li>
+          <li>Lagging apps</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
