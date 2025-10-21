@@ -1,4 +1,4 @@
-# Frontend Wizards — Stage 1 (Fresh Drip Theme)
+# Frontend Wizards — Stage 1 (Profile Card)
 
 This is a simple 3-page static site built for the Frontend Wizards Stage 1 task.
 It includes:
