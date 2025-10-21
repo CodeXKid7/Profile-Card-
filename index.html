@@ -1,83 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Card | Frontend Wizards</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Code X Kid — Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <article data-testid="test-profile-card" class="profile-card">
-    <figure class="avatar" id="avatarDropZone" data-testid="avatar-dropzone">
-      <img 
-        src="https://i.pravatar.cc/200" 
-        alt="User avatar" 
-        id="userAvatar"
-        data-testid="test-user-avatar">
-    </figure>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Frontend Wizards home">Techead Enterprise</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <div class="profile-info">
-      <header>
-        <h2 data-testid="test-user-name">Code X Kid</h2>
-      </header>
+  <main class="container">
+    <section class="profile-card" data-testid="test-profile-card" aria-labelledby="profile-name">
+      <div class="avatar-wrap">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Profile avatar" class="avatar" />
+        <div class="drip" aria-hidden="true"></div>
+      </div>
 
-      <p data-testid="test-user-bio">
-        A passionate frontend wizard learning to build accessible and modern web experiences.
+      <h1 id="profile-name" class="profile-name">Code X Kid</h1>
+      <p class="profile-role">Frontend Developer &amp; Design Lover</p>
+
+      <p class="profile-bio" data-testid="test-profile-bio">
+        A clean, modern profile card that pairs subtle glassmorphism with soft motion.
       </p>
 
-      <p>
-        Current Time (ms): 
-        <span data-testid="test-user-time" id="userTime"></span>
-      </p>
+      <ul class="profile-stats" role="list">
+        <li><strong>Projects</strong><span>8</span></li>
+        <li><strong>Experience</strong><span>2 yrs</span></li>
+        <li><strong>Focus</strong><span>Accessibility</span></li>
+      </ul>
 
-      <section class="avatar-input">
-        <h3>Change Avatar</h3>
-        <input 
-          type="text" 
-          id="avatarUrlInput" 
-          placeholder="Enter image URL" 
-          data-testid="avatar-url-input">
-        <p>or</p>
-        <input 
-          type="file" 
-          id="avatarFileInput" 
-          accept="image/*" 
-          data-testid="avatar-file-input">
+      <div class="card-actions">
+        <a class="btn" href="about.html">About me</a>
+        <a class="btn ghost" href="contact.html">Contact</a>
+      </div>
+    </section>
+  </main>
 
-        <div class="display-url">
-          <strong>Displayed Image URL:</strong>
-          <div id="displayedUrl" data-testid="avatar-displayed-url">(none)</div>
-        </div>
-      </section>
+  <footer class="site-footer">
+    <p>&copy; Techead Enterprise</p>
+  </footer>
 
-      <nav aria-label="Social links">
-        <ul data-testid="test-user-social-links">
-          <li><a href="https://twitter.com/" data-testid="test-user-social-twitter" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-          <li><a href="https://github.com/" data-testid="test-user-social-github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://linkedin.com/" data-testid="test-user-social-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-      </nav>
-
-      <section>
-        <h3>Hobbies</h3>
-        <ul data-testid="test-user-hobbies">
-          <li>Coding</li>
-          <li>Music</li>
-          <li>Gaming</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Dislikes</h3>
-        <ul data-testid="test-user-dislikes">
-          <li>Procrastination</li>
-          <li>Messy code</li>
-          <li>Lagging apps</li>
-        </ul>
-      </section>
-    </div>
-  </article>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
