@@ -1,85 +1,65 @@
-// Handles contact form validation and UI feedback
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
+// Timer
+const userTime = document.getElementById('userTime');
+if (userTime) {
+  setInterval(() => {
+    userTime.textContent = Date.now();
+  }, 50);
+}
 
-  const fields = {
-    fullName: {
-      el: document.getElementById('fullName'),
-      errorEl: document.getElementById('error-fullName'),
-      testid: 'test-contact-error-fullName',
-      validator: value => value.trim().length > 0 || 'Full name is required.'
-    },
-    email: {
-      el: document.getElementById('email'),
-      errorEl: document.getElementById('error-email'),
-      validator: value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || 'Please enter a valid email address.'
-    },
-    subject: {
-      el: document.getElementById('subject'),
-      errorEl: document.getElementById('error-subject'),
-      validator: value => value.trim().length > 0 || 'Subject is required.'
-    },
-    message: {
-      el: document.getElementById('message'),
-      errorEl: document.getElementById('error-message'),
-      validator: value => value.trim().length >= 10 || 'Message must be at least 10 characters.'
-    }
-  };
+// Avatar change logic
+const avatarUrlInput = document.getElementById('avatarUrlInput');
+const avatarFileInput = document.getElementById('avatarFileInput');
+const userAvatar = document.getElementById('userAvatar');
+const displayedUrl = document.getElementById('displayedUrl');
 
-  function showError(field, message) {
-    field.errorEl.textContent = message || '';
-    field.el.setAttribute('aria-invalid', !!message);
-  }
-
-  function clearErrors() {
-    Object.values(fields).forEach(f => {
-      f.errorEl.textContent = '';
-      f.el.removeAttribute('aria-invalid');
-    });
-  }
-
-  function validateAll() {
-    let isValid = true;
-    Object.values(fields).forEach(f => {
-      const result = f.validator(f.el.value);
-      if (result !== true) {
-        showError(f, result);
-        isValid = false;
-      } else {
-        showError(f, '');
-      }
-    });
-    return isValid;
-  }
-
-  // Real-time validation on blur
-  Object.values(fields).forEach(f => {
-    f.el.addEventListener('blur', () => {
-      const result = f.validator(f.el.value);
-      showError(f, result === true ? '' : result);
-    });
-  });
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    clearErrors();
-    const ok = validateAll();
-    const successMessage = document.getElementById('successMessage');
-    if (ok) {
-      // Show success message, reset form
-      successMessage.hidden = false;
-      successMessage.textContent = 'Thanks! Your message was sent.';
-      form.reset();
-      // Clear ARIA-invalid flags
-      Object.values(fields).forEach(f => f.el.removeAttribute('aria-invalid'));
-      // Focus success for screen readers
-      successMessage.focus && successMessage.focus();
+if (avatarUrlInput && userAvatar && displayedUrl) {
+  avatarUrlInput.addEventListener('input', () => {
+    const url = avatarUrlInput.value.trim();
+    if (url) {
+      userAvatar.src = url;
+      displayedUrl.textContent = url;
     } else {
-      successMessage.hidden = true;
-      // Focus first invalid field
-      const firstInvalid = Object.values(fields).find(f => f.el.getAttribute('aria-invalid') === 'true');
-      if (firstInvalid) firstInvalid.el.focus();
+      userAvatar.src = 'avatar-placeholder.png';
+      displayedUrl.textContent = '(none)';
     }
   });
-});
+}
+
+if (avatarFileInput) {
+  avatarFileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        userAvatar.src = reader.result;
+        displayedUrl.textContent = '(uploaded file)';
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+}
+
+// Contact Form Validation
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const status = document.getElementById('formStatus');
+
+    if (!name || !email || !message) {
+      status.textContent = 'Please fill in all fields.';
+      status.style.color = 'red';
+    } else if (!email.includes('@')) {
+      status.textContent = 'Enter a valid email address.';
+      status.style.color = 'red';
+    } else {
+      status.textContent = 'Message sent successfully!';
+      status.style.color = 'green';
+      contactForm.reset();
+    }
+  });
+}
+
