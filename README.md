@@ -29,7 +29,3 @@ It includes:
 - For GitHub Pages: push the files to a repository and enable Pages from the `main` branch.
 - For Netlify: drag & drop the unzipped folder to Netlify or connect repository.
 
-## Notes
-This is a static front-end project. The contact form only performs client-side validation and shows a success message — it does not send messages to a backend.
-
-Enjoy! — Frontend Wizards
