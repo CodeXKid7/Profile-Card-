@@ -1,121 +1,40 @@
-📝 Frontend Wizards — Task Manager Project
+💧 Frontend Wizards — Profile Card Project
+📌 Overview
+This project is a modern and responsive Profile Card UI built using HTML, CSS, and JavaScript. It was created as part of the Frontend Wizards Stage 1b task, focusing on clean design, structure, and testability.
+The card presents user information in a visually appealing way while maintaining simplicity and performance.
+🎯 Features
+Clean and modern card-based UI
+Responsive design (works on mobile and desktop)
+Structured with proper semantic HTML
+Styled using custom CSS variables (Bluish theme)
+Includes required data-testid attributes for testing
+Easy to customize and extend
+🛠️ Technologies Used
+HTML5
+CSS3 (Flexbox & Variables)
+JavaScript (basic interactivity)
+🧪 Testability
+The project includes specific data-testid attributes required for automated testing:
+data-testid="test-profile-card" → Root container
+data-testid="test-profile-name" → User name
+data-testid="test-profile-role" → User role/title
+data-testid="test-profile-image" → Profile image
+📂 Project Structure
+Copy code
 
-Welcome to the Frontend Wizards Task Manager Project — a clean and interactive Todo application built to manage daily tasks efficiently.
-This project focuses on modern UI design, DOM manipulation, and testable components using pure HTML, CSS, and JavaScript.
-
----
-
-🚀 Project Overview
-
-The application allows users to create, edit, and manage tasks through a simple and responsive interface.
-Each task is displayed as a card component, making it visually organized and easy to interact with.
-
----
-
-🎯 Core Functionality
-
-- Add new tasks
-- Edit existing tasks
-- Mark tasks as completed
-- Delete tasks
-- Organized card-based layout
-- Test-friendly structure using "data-testid"
-
----
-
-🎨 Features
-
-- Clean and modern UI design
-- Responsive layout for mobile and desktop
-- Interactive task cards
-- Smooth user experience
-- Minimal and readable design structure
-- Built without frameworks — pure HTML, CSS, JS only
-
----
-
-🧠 Technologies Used
-
-- HTML5 — structure and layout
-- CSS3 — styling and responsiveness
-- JavaScript (Vanilla) — logic and interactivity
-
----
-
-🗂️ Folder Structure
-
-task-manager/ │ ├── index.html        # Main App Structure ├── style.css         # Styling ├── script.js        # App Logic (Add/Edi📝 Frontend Wizards — Task Manager Project
-
-Welcome to the Frontend Wizards Task Manager Project — a clean and interactive Todo application built to manage daily tasks efficiently.
-This project focuses on modern UI design, DOM manipulation, and testable components using pure HTML, CSS, and JavaScript.
-
----
-
-🚀 Project Overview
-
-The application allows users to create, edit, and manage tasks through a simple and responsive interface.
-Each task is displayed as a card component, making it visually organized and easy to interact with.
-
----
-
-🎯 Core Functionality
-
-- Add new tasks
-- Edit existing tasks
-- Mark tasks as completed
-- Delete tasks
-- Organized card-based layout
-- Test-f— pure HTML, CSS, JS only
-
----
-
-🧠 Technologies Used
-
-- HTML5 — structure and layout
-- CSS3 — styling and responsiveness
-- JavaScript (Vanilla) — logic and interactivity
-
----
-
-🗂️ Folder Structure
-
-task-manager/ │ ├── index.html        # Main App Structure ├── style.css         # Styling ├── script.js        # App Logic (Add/Edit/Delete Tasks) └── assets/           # Images or icons (optional)
-
----
-
-⚙️ Setup Instructions
-
-1. Clone the repository:
-
-git clone https://github.com/your-username/task-manager.git
-
-2. Open the project folder
-
-3. Run the "index.html" file in your browser
-
----
-
-🌐 Deployment
-
-You can easily deploy this project using:
-
-- GitHub Pages
-- Netlify
-- Vercel
-
-No build tools or installations required — just upload and go 🚀
-
----
-
-🔮 Future Improvements
-
-- LocalStorage support (save tasks permanently)
-- Drag and drop task reordering
-- Dark mode toggle
-- Backend integration (Node.js / Firebase)
-
----
-
-💁‍♂️Author
-
-TM CODEX 
+/project-folder
+│── index.html
+│── style.css
+│── script.js
+🚀 Getting Started
+Clone or download the project
+Open index.html in your browser
+Customize content as needed
+🎨 Design Theme
+The UI follows a Bluish Drip theme, using soft gradients, rounded corners, and subtle shadows to create a smooth modern feel.
+📈 Future Improvements
+Add animations and transitions
+Connect to a backend or API
+Expand into a full multi-page portfolio (Stage 1)
+👤 Author
+TM CODEX
