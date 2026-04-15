@@ -1,87 +1,121 @@
-# 💧 Frontend Wizards — Stage 1 Project
+📝 Frontend Wizards — Task Manager Project
 
-Welcome to the **Frontend Wizards Stage 1 Project** — a continuation of the Stage 0 *Profile Card* task.  
-This stage expands the single card project into a **multi-page website** built with pure **HTML, CSS, and JavaScript**, keeping the **Bluish Drip** theme and modern design style.
-
----
-
-## 🚀 Project Overview
-
-The project features a personal profile card on the **Home** page, along with additional **About** and **Contact** pages.  
-It’s simple, responsive, and ready to deploy to **GitHub Pages** or **Netlify**.
-
-### 🔹 Pages Included
-1. **Home (index.html)** — Displays the profile card with:
-   - Profile image, name, and role  
-   - Bio section  
-   - Likes and dislikes  
-   - Real-time timer  
-   - Social media links  
-
-2. **About (about.html)** — Contains a short bio and background information.
-
-3. **Contact (contact.html)** — Includes a functional contact form with validation and success feedback.
+Welcome to the Frontend Wizards Task Manager Project — a clean and interactive Todo application built to manage daily tasks efficiently.
+This project focuses on modern UI design, DOM manipulation, and testable components using pure HTML, CSS, and JavaScript.
 
 ---
 
-## 🎨 Features
+🚀 Project Overview
 
-- Clean and modern *Bluish Drip* design  
-- Responsive layout for all devices  
-- Navigation bar linking all pages  
-- Timer displayed under “Dislikes”  
-- Functional contact form with inline validation  
-- Footer section on every page  
-- Uses no frameworks — **pure HTML, CSS, JS only**
+The application allows users to create, edit, and manage tasks through a simple and responsive interface.
+Each task is displayed as a card component, making it visually organized and easy to interact with.
 
 ---
 
-## 🧠 Technologies Used
+🎯 Core Functionality
 
-- **HTML5** — for structure  
-- **CSS3** — for styling and layout  
-- **JavaScript (Vanilla)** — for timer and form validation  
-
----
-
-## 🗂️ Folder Structure
-
-stage1-project/ │ ├── index.html        # Home / Profile Card ├── about.html        # About Page ├── contact.html      # Contact Page ├── style.css         # Shared CSS Styles ├── script.js         # Timer Functionality └── avatar-placeholder.png  # Profile Avatar
+- Add new tasks
+- Edit existing tasks
+- Mark tasks as completed
+- Delete tasks
+- Organized card-based layout
+- Test-friendly structure using "data-testid"
 
 ---
 
-## ⚙️ Setup Instructions
+🎨 Features
 
-1. **Download or Clone** the repository:
-   ```bash
-   git clone https://github.com/your-username/frontend-wizards-stage1.git
+- Clean and modern UI design
+- Responsive layout for mobile and desktop
+- Interactive task cards
+- Smooth user experience
+- Minimal and readable design structure
+- Built without frameworks — pure HTML, CSS, JS only
 
-2. Open the project folder.
+---
 
+🧠 Technologies Used
 
-3. Run the index.html file in your browser to view the project.
+- HTML5 — structure and layout
+- CSS3 — styling and responsiveness
+- JavaScript (Vanilla) — logic and interactivity
 
+---
 
+🗂️ Folder Structure
 
+task-manager/ │ ├── index.html        # Main App Structure ├── style.css         # Styling ├── script.js        # App Logic (Add/Edi📝 Frontend Wizards — Task Manager Project
+
+Welcome to the Frontend Wizards Task Manager Project — a clean and interactive Todo application built to manage daily tasks efficiently.
+This project focuses on modern UI design, DOM manipulation, and testable components using pure HTML, CSS, and JavaScript.
+
+---
+
+🚀 Project Overview
+
+The application allows users to create, edit, and manage tasks through a simple and responsive interface.
+Each task is displayed as a card component, making it visually organized and easy to interact with.
+
+---
+
+🎯 Core Functionality
+
+- Add new tasks
+- Edit existing tasks
+- Mark tasks as completed
+- Delete tasks
+- Organized card-based layout
+- Test-f— pure HTML, CSS, JS only
+
+---
+
+🧠 Technologies Used
+
+- HTML5 — structure and layout
+- CSS3 — styling and responsiveness
+- JavaScript (Vanilla) — logic and interactivity
+
+---
+
+🗂️ Folder Structure
+
+task-manager/ │ ├── index.html        # Main App Structure ├── style.css         # Styling ├── script.js        # App Logic (Add/Edit/Delete Tasks) └── assets/           # Images or icons (optional)
+
+---
+
+⚙️ Setup Instructions
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/task-manager.git
+
+2. Open the project folder
+
+3. Run the "index.html" file in your browser
 
 ---
 
 🌐 Deployment
 
-You can deploy this project using:
+You can easily deploy this project using:
 
-GitHub Pages
+- GitHub Pages
+- Netlify
+- Vercel
 
-Netlify
-
-Vercel
-
-
-Simply upload the entire folder — no build step required.
-
+No build tools or installations required — just upload and go 🚀
 
 ---
 
-👨‍💻 Author
+🔮 Future Improvements
 
-Code X Kid 
+- LocalStorage support (save tasks permanently)
+- Drag and drop task reordering
+- Dark mode toggle
+- Backend integration (Node.js / Firebase)
+
+---
+
+💁‍♂️Author
+
+TM CODEX 
